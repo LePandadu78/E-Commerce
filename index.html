@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Produits de France</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Produits de France</h1>
+    <img src="restaurant-895427_1920.png" alt="Logo restaurant">
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Produits</a>
+          <div class="dropdown-content">
+            <a href="vins.html">Vins et spiritueux</a>
+            <a href="fromages.html">Fromagerie</a>
+            <a href="charcuterie.html">Charcuterie</a>
+            <a href="sucre.html">Sucré</a>
+            <a href="autre.html">Autre</a>
+          </div>
+        </li>
+        <li><a href="#" id="panier">Panier (<span id="compteur-panier">0</span>)</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2>La richesse et le savoir faire gastronomique Français</h2>
+      <p>Explorez notre sélection de produits artisanaux fabriqués avec soin par des artisans locaux passionnés.</p>
+      <p>La gastronomie française est célèbre dans le monde entier pour sa richesse, sa diversité et sa qualité
+        inégalée. Les produits français sont reconnus pour leur excellence, leur fraîcheur et leur authenticité,
+        résultat d'un savoir-faire ancestral et d'une passion pour la gastronomie.
+
+        La France est un pays de terroirs, chaque région offrant ses spécialités et ses produits emblématiques. De la
+        charcuterie aux fromages en passant par les vins et les fruits de mer, la variété des produits français est
+        exceptionnelle.
+
+        Les agriculteurs, éleveurs, pêcheurs et artisans français ont à cœur de respecter les traditions et les méthodes
+        de production artisanales, garantissant ainsi une qualité irréprochable des produits. Les labels et les
+        certifications, tels que le label rouge, l'AOP ou l'IGP, sont des gages de qualité et de traçabilité, permettant
+        de garantir une provenance et une qualité supérieure.
+
+        Chez Produits de France, nous avons sélectionné pour vous les meilleurs produits de la gastronomie
+        française, en travaillant directement avec les producteurs locaux pour vous offrir une expérience gustative
+        unique et authentique. Nous exportons nos produits dans le monde entier pour faire découvrir les saveurs de la
+        France à travers le monde.
+
+        En choisissant Produits de France, vous optez pour la qualité et l'excellence des produits français,
+        ainsi que pour un savoir-faire traditionnel et une passion pour la gastronomie transmise de génération en
+        génération.</p>
+    </section>
+
+    <h2>Nos produits phares</h2>
+    <a href="vins.html" class="btn-hero">Voir tous les produits Vin et Spiritueux</a>
+
+    <section id="products">
+      <ul>
+        <li id="figeac" data-nom="Saint-Emilion Château Figeac" data-prix="400" data-image="chateau-figeac-2015-1er-grand-cru-classe-b.png">
+          <a href="#">
+            <img src="chateau-figeac-2015-1er-grand-cru-classe-b.png" alt="Bouteille Saint-Emilion Château Figeac">
+            <h3>Saint-Emilion Château Figeac</h3>
+            <p class="prix">400€</p>
+          </a>
+          <button onclick="openModal()">Commander</button>
+        </li>
+        <li id="pavie" data-nom="Saint-Emilion Château Pavie" data-prix="450" data-image="chateau-pavie-2019-1er-grand-cru-classe-b.png">
+          <a href="#">
+            <img src="chateau-pavie-2019-1er-grand-cru-classe-b.png" alt="Bouteille Saint-Emilion Château Figeac">
+            <h3>Saint-Emilion Château Pavie</h3>
+            <p class="prix">450€</p>
+          </a>
+          <button onclick="openModal()">Commander</button>
+        </li>
+        <li>
+          <a href="#">
+            <img src="cotes-de-provence-rosalie-domaine-terre-de-mistral-75cl.jpg" alt="Bouteille Rosé Rosalie">
+            <h3>Côte de Provence Rosé Rosalie</h3>
+            <p class="prix">40€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="cotes-de-provence-simone-domaine-terre-de-mistral-75cl.jpg" alt="Bouteille Rosé Simone">
+            <h3>Côte de Provence Rosé Simone</h3>
+            <p class="prix">45€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+      </ul>
+    </section>
+    <a href="fromages.html" class="btn-hero">Voir tous les produits Fromagerie</a>
+
+    <section id="products">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="entete-fromagerie-camembert-unique-0a519703.webp" alt="Camembert">
+            <h3>Camembert de Normandie Bio AOP</h3>
+            <p class="prix">A partir de 15€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="comté.png" alt="Comté">
+            <h3>Comté AOP</h3>
+            <p class="prix">A partir de 20€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="roquefort.jpg" alt="Roquefort">
+            <h3>Roquefort AOP</h3>
+            <p class="prix">A partir de 20€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="chevre.jpg" alt="Fromage de Chèvre">
+            <h3>Fromage de Chèvre AOP</h3>
+            <p class="prix">A partir de 15€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+      </ul>
+    </section>
+    <a href="charcuterie.html" class="btn-hero">Voir tous les produits Charcuterie</a>
+
+    <section id="products">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="produit_demijambon18mois.jpg" alt="Jambon de Bayonne">
+            <h3>Jambon de Bayonne AOP</h3>
+            <p class="prix">A partir de 15€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="Andouillettes_de_Troyes_dressées_par_Christophe_Thierry_(Sainte-Savine).jpg"
+              alt="Andouillette de Troyes">
+            <h3>Andouillette de Troyes</h3>
+            <p class="prix">A partir de 20€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="10984_BONVAL_rillon.jpg" alt="Rillons de Tours">
+            <h3>Rillons de Tours</h3>
+            <p class="prix">A partir de 20€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="H786_ROSETTE_LYON_10T_100GJPG.webp" alt="Rosette de Lyon">
+            <h3>Rosette de Lyon</h3>
+            <p class="prix">A partir de 15€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+      </ul>
+    </section>
+    <a href="sucre.html" class="btn-hero">Voir tous les produits Sucrés</a>
+
+    <section id="products">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="caramels-mous-isigny.webp" alt="Caramel d'Isigny">
+            <h3>Caramel d'Isigny</h3>
+            <p class="prix">A partir de 15€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="Vichy_Pastilles.jpg" alt="Pastilles Vichy">
+            <h3>Pastilles de Vichy</h3>
+            <p class="prix">A partir de 20€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="betises.jpg" alt="Bêtises de Cambrai">
+            <h3>Bêtises de Cambrai</h3>
+            <p class="prix">A partir de 20€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="nougat montelimard.jpg" alt="Nougats de Montélimard">
+            <h3>Nougats de Montélimard</h3>
+            <p class="prix">A partir de 15€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+        <li>
+          <a href="#">
+            <img src="calisson daix.jpg" alt="Calissons d'Aix">
+            <h3>Calissons d'Aix</h3>
+            <p class="prix">A partir de 15€</p>
+          </a>
+          <button>Commander</button>
+
+        </li>
+      </ul>
+    </section>
+  </main>
+  <!-- Contenu de la modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="product-details">
+        <img id="image-produit" src="" alt="">
+        <div class="price-and-quantity">
+          <h2 id="nom-produit"></h2>
+          <p id="prix-produit"></p>
+          <label for="quantite">Quantité:</label>
+          <input type="number" id="quantite" name="quantite" value="1" min="1">
+          <p id="prix-total"></p>
+          <button onclick="commander()">Commander</button>
+        </div>
+      </div>
+      <div class="product-description">
+        <p>Description du produit ici</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 Produits de France - E-commerce</p>
+  </footer>
+  <script src="modal.js"></script>
+</body>
+
+</html>
