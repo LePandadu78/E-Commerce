@@ -1,22 +1,22 @@
 // Fonction pour ouvrir la modal
-function openModal() {
+function openModal(source) {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
-    var figeac = document.getElementById("figeac");
+    var figeac = document.getElementById(source);
     var nom = figeac.getAttribute("data-nom");
     var prix = figeac.getAttribute("data-prix");
     var image = figeac.getAttribute("data-image");
-  
+
     // Remplir la modal avec les valeurs des attributs data
     document.getElementById("nom-produit").textContent = nom;
     document.getElementById("prix-produit").textContent = prix + "€";
     document.getElementById("image-produit").src = image;
-  
+
     // Mettre à jour le prix total en fonction de la quantité choisie
     var quantite = document.getElementById("quantite").value;
     var prixTotal = prix * quantite;
     document.getElementById("prix-total").textContent = "Prix total: " + prixTotal.toFixed(0) + "€";
-  
+
     // Ajouter un événement onchange au champ de saisie de quantité pour mettre à jour le prix total en temps réel
     var quantiteInput = document.getElementById("quantite");
     quantiteInput.onchange = function() {
@@ -27,10 +27,10 @@ function openModal() {
       document.getElementById("prix-total").textContent = "Prix total: " + prixTotal.toFixed(0) + "€";
     };
   }
-  
+
   function ajouterAuPanier(nomProduit, quantite, prixTotal) {
     var panier = JSON.parse(localStorage.getItem("panier")) || []; // Récupérer le panier ou le créer s'il n'existe pas encore
-  
+
     // Vérifier si le produit est déjà dans le panier
     var produitExistant = false;
     for (var i = 0; i < panier.length; i++) {
@@ -42,7 +42,7 @@ function openModal() {
         break;
       }
     }
-  
+
     // Si le produit n'existe pas encore dans le panier, le créer et l'ajouter au panier
     if (!produitExistant) {
       var produit = {
@@ -52,10 +52,10 @@ function openModal() {
       };
       panier.push(produit);
     }
-  
+
     // Enregistrer le panier dans le localStorage
     localStorage.setItem("panier", JSON.stringify(panier));
-  
+
     // Afficher un message de confirmation
     var message = quantite + " bouteille(s) de " + nomProduit + " ont été ajoutées au panier !";
     alert(message);
@@ -79,23 +79,23 @@ function openModal() {
 document.getElementById("commander").addEventListener("click", function() {
     // Récupérer la quantité de produits commandée
     var quantite = document.getElementById("quantite").value;
-  
+
     // Ajouter la quantité au compteur de panier
     var compteurPanier = document.getElementById("compteur-panier");
     var nombreCommandes = parseInt(compteurPanier.textContent) + parseInt(quantite);
     compteurPanier.textContent = nombreCommandes;
-  
+
     // Afficher le message de confirmation
     var confirmation = document.getElementById("confirmation-commande");
     confirmation.style.display = "block";
-    
+
     // Fermer la modal
     closeModal();
   });
 
     // Afficher la modal
     document.getElementById("myModal").style.display = "block";
-  
+
 
   // Fonction pour fermer la modal
   function closeModal() {
